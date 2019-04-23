@@ -109,11 +109,24 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      bottomNavigationBar: _bottomNavigation,
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+
+  Widget get _bottomNavigation {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(icon: Image.asset('assets/dish.png', scale: 20,), title: Text('hoge')),
+        BottomNavigationBarItem(icon: Image.asset('assets/dish.png', scale: 20,), title: Text('hoge')),
+        BottomNavigationBarItem(icon: Image.asset('assets/dish.png', scale: 20,), title: Text('hoge')),
+        BottomNavigationBarItem(icon: Image.asset('assets/dish.png', scale: 20,), title: Text('hoge')),
+      ],
     );
   }
 }

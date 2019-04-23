@@ -1,0 +1,13 @@
+{
+  "@@last_modified": "2019-07-29T16:55:48.543699",
+  "title": "ホーム",
+  "@title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "message": "(・∀・)",
+  "@message": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

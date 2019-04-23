@@ -1,0 +1,13 @@
+{
+  "@@last_modified": "2019-07-29T16:55:48.543699",
+  "title": "Flutter Demo Home Page",
+  "@title": {
+    "type": "text",
+    "placeholders": {}
+  },
+  "message": "You have pushed the button this many times:",
+  "@message": {
+    "type": "text",
+    "placeholders": {}
+  }
+}

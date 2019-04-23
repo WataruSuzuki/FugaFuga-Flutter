@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 
-void main() => runApp(MyApp());
+const String admobAppId = 'ca-app-pub-3940256099942544~3347511713';
+String admobInterstitialId = InterstitialAd.testAdUnitId;
+
+void main() {
+  FirebaseAdMob.instance.initialize(appId: admobAppId);
+  runApp(MyApp());
+}
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

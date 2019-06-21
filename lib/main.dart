@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 //import 'package:flutter_cupertino_localizations/flutter_cupertino_localizations.dart';
+import 'package:groovin_widgets/modal_drawer_handle.dart';
 
 const String admobAppId = 'ca-app-pub-3940256099942544~3347511713';
 String admobInterstitialId = InterstitialAd.testAdUnitId;
@@ -115,7 +116,28 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: _bottomNavigation,
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () => showModalBottomSheet(
+          context: context,
+          builder: (builder) {
+            return Container(
+              height: 550.0,
+              child: Container(
+                height: 550,
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ModalDrawerHandle(
+                        handleColor: Colors.indigoAccent,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
+          },
+          isScrollControlled: true
+        ),
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
